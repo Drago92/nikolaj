@@ -7898,6 +7898,7 @@ textarea.form-control-lg {
 .text-info {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-info-rgb), var(--bs-text-opacity)) !important;
+
 }
 
 .text-warning {
@@ -11505,7 +11506,9 @@ body {
     padding-top: 0;
     padding-bottom: 0;
     border-bottom: none;
-    background-color: transparent;
+    background-color: rgba(255,255,255,0.3);
+    backdrop-filter: blur( 2px );
+    -webkit-backdrop-filter: blur( 2px );
     transition: background-color 0.3s ease-in-out;
   }
   #mainNav .navbar-brand {
@@ -11515,11 +11518,11 @@ body {
   #mainNav .nav-link {
     transition: none;
     padding: 2rem 1.5rem;
-    color: rgb(255, 255, 255);
+    color: #003760;
     font-weight: bold;
   }
   #mainNav .nav-link:hover {
-    color: rgba(255, 255, 255, 0.75);
+    color: #71C2F1;
   }
   #mainNav .nav-link:active {
     color: #fff;
@@ -11531,20 +11534,20 @@ body {
     color: #000;
   }
   #mainNav.navbar-shrink .nav-link {
-    color: #000;
+    color: #003760;
     padding: 1.5rem 1.5rem 1.25rem;
     border-bottom: 0.25rem solid transparent;
   }
   #mainNav.navbar-shrink .nav-link:hover {
-    color: #64a19d;
+    color: #71C2F1;
   }
   #mainNav.navbar-shrink .nav-link:active {
-    color: #467370;
+    color: #71C2F1;
   }
   #mainNav.navbar-shrink .nav-link.active {
-    color: #64a19d;
+    color: #71C2F1;
     outline: none;
-    border-bottom: 0.25rem solid #64a19d;
+    border-bottom: 0.25rem solid #71C2F1;
   }
 }
 
@@ -11563,7 +11566,7 @@ body {
   width: 100%;
   height: auto;
   min-height: 35rem;
-  padding: 3rem 0;
+  padding: 5rem 0;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -11580,14 +11583,29 @@ body {
           background-clip: text;
 }
 .masthead h2, .masthead .h2 {
-  color: white;
   max-width: 20rem;
-  font-size: 2rem;
-  text-shadow: 2px 2px rgba(0, 55, 96, 0.75);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  background: rgba( 0, 55, 96, 0.25 );
+  padding-left: 15px;
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 6.0px );
+  -webkit-backdrop-filter: blur( 6.0px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 .masthead .container{
   position: relative;
   top:-300px;
+}
+@keyframes water {
+  from {
+    background-position: left 0 top 0;
+  }
+  to {
+    background-position: left 1000px top 0;
+  }
 }
 @media (min-width: 768px) {
   .masthead h1, .masthead .h1 {
@@ -11606,7 +11624,6 @@ body {
     letter-spacing: 0.8rem;
   }
   .masthead h2, .masthead .h2 {
-    color: white;
     max-width: 30rem;
     font-size: 2.25rem;
   }
