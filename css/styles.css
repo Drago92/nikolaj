@@ -11598,7 +11598,7 @@ body {
 }
 .masthead .container{
   position: relative;
-  top:-350px;
+  top:-200px;
 }
 @keyframes water {
   from {
@@ -11612,6 +11612,14 @@ body {
   .masthead h1, .masthead .h1 {
     font-size: 4rem;
     line-height: 4rem;
+  }
+  .masthead h2, .masthead .h2 {
+    max-width: 33rem;
+    font-size: 2.5rem;
+  }
+  .masthead .container{
+    position: relative;
+    top:-300px;
   }
 }
 @media (min-width: 992px) {
@@ -11627,10 +11635,6 @@ body {
   .masthead h2, .masthead .h2 {
     max-width: 44rem;
     font-size: 3.5rem;
-  }
-  .masthead .container{
-    position: relative;
-    top:-270px;
   }
 }
 
