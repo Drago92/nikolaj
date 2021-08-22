@@ -11515,7 +11515,8 @@ body {
   #mainNav .nav-link {
     transition: none;
     padding: 2rem 1.5rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
   }
   #mainNav .nav-link:hover {
     color: rgba(255, 255, 255, 0.75);
@@ -11562,8 +11563,7 @@ body {
   width: 100%;
   height: auto;
   min-height: 35rem;
-  padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/bg-masthead.jpg");
+  padding: 3rem 0;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -11583,6 +11583,11 @@ body {
   color: white;
   max-width: 20rem;
   font-size: 2rem;
+  text-shadow: 2px 2px rgba(0, 55, 96, 0.75);
+}
+.masthead .container{
+  position: relative;
+  top:-300px;
 }
 @media (min-width: 768px) {
   .masthead h1, .masthead .h1 {
@@ -11604,6 +11609,10 @@ body {
     color: white;
     max-width: 30rem;
     font-size: 2.25rem;
+  }
+  .masthead .container{
+    position: relative;
+    top:-220px;
   }
 }
 
