@@ -11645,7 +11645,7 @@ body {
 
 .about-section {
   padding-top: 10rem;
-  clip-path: polygon(0 0%, 100% 0%, 100% 91%, 0% 100%);
+  clip-path: polygon(0 0%, 100% 0%, 100% 95%, 0% 100%);
 
 }
 .about-section p {
@@ -11661,7 +11661,7 @@ body {
 
 .geothermie-section {
   padding-top: 10rem;
-  clip-path: polygon(0 9%, 100% 0%, 100% 91%, 0% 100%);
+  clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
 }
 .geothermie-section p {
   margin-bottom: 5rem;
@@ -11688,7 +11688,7 @@ body {
 }
 
 .signup-section {
-  padding: 10rem 0;
+  padding: 10rem 0 0 0;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -11707,7 +11707,7 @@ body {
 
 .contact-section {
   padding-top: 5rem;
-  clip-path: polygon(0 9%, 100% 0%, 100% 91%, 0% 100%);
+  clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
 
 }
 .contact-section .card {
