@@ -11,6 +11,47 @@ $(".carousel-control-prev").click(function (){
 $(".carousel-control-next").click(function (){
     $(".carousel").carousel('next');
 });
+
+$("#submit").click(function() {
+    var name = $("#name").val();
+    var email = $("#email").val();
+    var message = $("#message").val();
+    $("#returnmessage").empty(); // To empty previous error/success message.
+    $("#errname").empty(); // To empty previous error/success message.
+    $("#errmail").empty(); // To empty previous error/success message.
+    $("#name").removeClass("err");
+    $("#email").removeClass("err");
+// Checking for blank fields.
+    if (name == '') {
+        $("#name").addClass("err");
+        $("#errname").append("Bitte geben Sie einen Namen an.");
+    } else if(email == '') {
+        $("#email").addClass("err");
+        $("#errmail").append("Bitte geben Sie eine Email Adresse an.");
+    }else{
+// Returns successful data submission message when the entered information is stored in database.
+        $.post("scripts/contact_form.php", {
+            name: name,
+            email: email,
+            message: message,
+            emailTo: 'k.broja@web.de'
+        }, function(data) {
+            $("#returnmessage").append(data); // Append returned message to message paragraph.
+            if (data == "Vielen Dank für Ihre Anfrage. Wir werden sie bald kontaktieren.") {
+                $("#form")[0].reset(); // To reset form fields on success.
+            }
+        });
+        if($("#checkbox").is(':checked')) {
+            $.post("scripts/contact_form.php", {
+                name: name,
+                email: email,
+                message: message,
+                emailTo: email
+            }, function(data) {
+            });
+        }
+    }
+});
 //------------------VANILLAJS SCRIPT------------------------
 window.addEventListener('DOMContentLoaded', event => {
     // Navbar shrink function
