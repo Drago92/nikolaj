@@ -1,12 +1,17 @@
-/*!
-* Start Bootstrap - Grayscale v7.0.3 (https://startbootstrap.com/theme/grayscale)
-* Copyright 2013-2021 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-grayscale/blob/master/LICENSE)
-*/
-//
-// Scripts
-//
 
+//------------------JQUERY SCRIPT------------------------
+$(document).ready(function() {
+    $('.carousel').carousel({
+        interval: 4000
+    })
+});
+$(".carousel-control-prev").click(function (){
+    $(".carousel").carousel('prev');
+});
+$(".carousel-control-next").click(function (){
+    $(".carousel").carousel('next');
+});
+//------------------VANILLAJS SCRIPT------------------------
 window.addEventListener('DOMContentLoaded', event => {
     // Navbar shrink function
     var navbarShrink = function () {
