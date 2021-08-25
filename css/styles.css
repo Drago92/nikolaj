@@ -7926,6 +7926,11 @@ textarea.form-control-lg {
   color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
 }
 
+.text-blue {
+  --bs-text-opacity: 1;
+  color: rgba(0,55,96,0.9) !important;
+}
+
 .text-white {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
@@ -11745,7 +11750,7 @@ body {
 }
 
 .footer {
-  padding: 5rem 0;
+  padding-top: 5rem;
 }
 .err{
   border: solid 1px red;
@@ -11753,4 +11758,17 @@ body {
 
 .errText{
   color: red;
+}
+
+.footerBadge{
+  height: 10rem;
+  margin-left: 2rem;
+  top: -4rem;
+  position: relative;
+}
+
+.footerBadge img{
+  height: inherit;
+  position: absolute;
+  left: 0px;
 }
