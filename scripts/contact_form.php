@@ -4,9 +4,11 @@ if($_POST){
     $email = $_POST['email'];
     $message = $_POST['message'];
     $emailTo = $_POST['emailTo'];
+    $betreff = $_POST['betreff'];
+    $address = $_POST['address'];
 
     //send email
-    if(mail(.$emailTo, "From: " .$email, $message)){
+    if(mail(.$emailTo, $betreff, $message. "\n" .$address, "From: " .$name. " <" .$email. ">")){
         echo "Vielen Dank für Ihre Anfrage. Wir werden sie bald kontaktieren.";
     } else {
         echo 'Es tut uns Leid, aber die Email wurde nicht verschickt.';

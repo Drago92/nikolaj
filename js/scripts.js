@@ -13,9 +13,11 @@ $(".carousel-control-next").click(function (){
 });
 
 $("#submit").click(function() {
-    var name = $("#name").val();
-    var email = $("#email").val();
-    var message = $("#message").val();
+    let name = $("#name").val();
+    let email = $("#email").val();
+    let message = $("#message").val();
+    let betreff = $("#betreff").val();
+    let address = $("#strasse").val() + " " + $("#hsnr").val() + ", " + $("#plz").val() + " " + $("#ort").val();
     $("#returnmessage").empty(); // To empty previous error/success message.
     $("#errname").empty(); // To empty previous error/success message.
     $("#errmail").empty(); // To empty previous error/success message.
@@ -34,6 +36,8 @@ $("#submit").click(function() {
             name: name,
             email: email,
             message: message,
+            address: address,
+            betreff: betreff,
             emailTo: 'k.broja@web.de'
         }, function(data) {
             $("#returnmessage").append(data); // Append returned message to message paragraph.
@@ -46,7 +50,9 @@ $("#submit").click(function() {
                 name: name,
                 email: email,
                 message: message,
-                emailTo: email
+                emailTo: email,
+                address: address,
+                betreff: email
             }, function(data) {
             });
         }
