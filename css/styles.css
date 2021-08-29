@@ -44,7 +44,7 @@
   --bs-black: #000;
   --bs-white: #fff;
   --bs-primary-rgb: 100, 161, 157;
-  --bs-secondary-rgb: 116, 100, 161;
+  --bs-secondary-rgb: 235, 235, 235;
   --bs-success-rgb: 103, 194, 156;
   --bs-info-rgb: 28, 171, 196;
   --bs-warning-rgb: 228, 198, 98;
@@ -11771,4 +11771,47 @@ body {
   height: inherit;
   position: absolute;
   left: 0px;
+}
+
+#impressum{
+  padding-top: 5rem;
+}
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  height: 70px;
+  border-radius: 50px;
+  box-shadow: 4px 4px 8px 0px gray;
+  display: none;
+}
+
+svg{
+  height: 20px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
