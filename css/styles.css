@@ -11625,11 +11625,13 @@ body {
   }
   .masthead .button{
     position: relative;
-  }
 }
 @media (min-width: 992px) {
   .masthead {
     height: 100vh;
+  }
+  .masthead .container{
+    top:-300px;
   }
   .masthead h1, .masthead .h1 {
     font-size: 6.5rem;
@@ -11759,6 +11761,7 @@ body {
   margin-left: 2rem;
   top: -4rem;
   position: relative;
+  width: 13rem;
 }
 
 .footerBadge img{
