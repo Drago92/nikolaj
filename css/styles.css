@@ -59,7 +59,7 @@
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  --bs-body-font-family: Nunito, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --bs-body-font-family: axia,sans-serif;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
@@ -350,7 +350,7 @@ select,
 optgroup,
 textarea {
   margin: 0;
-  font-family: inherit;
+  font-family: var(--bs-body-font-family);
   font-size: inherit;
   line-height: inherit;
 }
@@ -2993,7 +2993,7 @@ textarea.form-control-lg {
 
 .btn {
   display: inline-block;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.5;
   color: #212529;
   text-align: center;
@@ -3029,14 +3029,17 @@ textarea.form-control-lg {
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #003761;
-  border-color: #003761;
+  display: flex;
+  color: #003761;
+  background-color: #FFAA29;
+  border-color: #FFAA29;
+  text-align: left;
+  align-content: center;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #71C2F1;
-  border-color: #71C2F1;
+  background-color: #003761;
+  border-color: #003761;
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;
@@ -3046,8 +3049,8 @@ textarea.form-control-lg {
 }
 .btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #022947;
-  border-color: #022947;
+  background-color: #FFAA29;
+  border-color: #FFAA29;
 }
 .btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.25rem rgb(2, 41, 71);
@@ -4143,8 +4146,6 @@ textarea.form-control-lg {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
 }
 .navbar > .container,
 .navbar > .container-fluid,
@@ -5917,7 +5918,7 @@ textarea.form-control-lg {
   z-index: 1080;
   display: block;
   margin: 0;
-  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--bs-body-font-family);
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -6019,7 +6020,7 @@ textarea.form-control-lg {
   z-index: 1070;
   display: block;
   max-width: 276px;
-  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family:var(--bs-body-font-family);
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -6166,6 +6167,7 @@ textarea.form-control-lg {
   display: none;
   float: left;
   width: 100%;
+  height:100%;
   margin-right: -100%;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -6329,13 +6331,11 @@ textarea.form-control-lg {
 
 .carousel-caption {
   position: absolute;
-  right: 15%;
-  bottom: 1.25rem;
-  left: 15%;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+  bottom: 6.25rem;
+  padding: 1.25rem 7%;
+  margin-left: auto;
   color: #fff;
-  text-align: center;
+  text-align: left;
 }
 
 .carousel-dark .carousel-control-prev-icon,
@@ -11518,7 +11518,7 @@ body {
     padding-top: 0;
     padding-bottom: 0;
     border-bottom: none;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgb(255,255,255);
     backdrop-filter: blur( 2px );
     -webkit-backdrop-filter: blur( 2px );
     transition: background-color 0.3s ease-in-out;
@@ -11529,12 +11529,12 @@ body {
   }
   #mainNav .nav-link {
     transition: none;
-    padding: 2rem 1.5rem;
     color: #003760;
-    font-weight: bold;
+    padding: 1.5rem 1.5rem 1.25rem;
+    border-bottom: 0.25rem solid transparent;
   }
   #mainNav .nav-link:hover {
-    color: #71C2F1;
+   font-weight: 900;
   }
   #mainNav .nav-link:active {
     color: #fff;
@@ -11551,24 +11551,23 @@ body {
     border-bottom: 0.25rem solid transparent;
   }
   #mainNav.navbar-shrink .nav-link:hover {
-    color: #71C2F1;
+    font-weight: 900;
   }
   #mainNav.navbar-shrink .nav-link:active {
     color: #71C2F1;
   }
   #mainNav.navbar-shrink .nav-link.active {
-    color: #71C2F1;
+    font-weight: 900;
     outline: none;
-    border-bottom: 0.25rem solid #71C2F1;
+    border-bottom: 0.25rem solid #FFAA29;
   }
 }
 
 .btn {
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
   padding: 1.25rem 2rem;
-  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 80%;
-  text-transform: uppercase;
+  font-family: var(--bs-body-font-family);
+  font-size: 100%;
   letter-spacing: 0.15rem;
   border: 0;
 }
@@ -11578,14 +11577,14 @@ body {
   width: 100%;
   height: auto;
   min-height: 35rem;
-  padding: 5rem 0;
+  padding: 5rem 0 0 0;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
 }
 .masthead h1, .masthead .h1 {
-  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--bs-body-font-family);
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
@@ -11595,22 +11594,17 @@ body {
           background-clip: text;
 }
 .masthead h2, .masthead .h2 {
-  font-family: Calibri;
+  font-family: var(--bs-body-font-family);
   font-weight: bold;
   max-width: 20rem;
   font-size: 1.5rem;
   color: #fff;
-  background: rgba( 0, 55, 96, 0.25 );
   padding-left: 15px;
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 6.0px );
-  -webkit-backdrop-filter: blur( 6.0px );
-  border-radius: 10px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
-.masthead .container{
+.masthead .button{
   position: relative;
-  top:-200px;
+  padding-left: 8%;
+  bottom: 100px;
 }
 @keyframes water {
   from {
@@ -11629,15 +11623,13 @@ body {
     max-width: 33rem;
     font-size: 2.5rem;
   }
-  .masthead .container{
+  .masthead .button{
     position: relative;
-    top:-300px;
   }
 }
 @media (min-width: 992px) {
   .masthead {
     height: 100vh;
-    padding: 0;
   }
   .masthead h1, .masthead .h1 {
     font-size: 6.5rem;
@@ -11645,7 +11637,7 @@ body {
     letter-spacing: 0.8rem;
   }
   .masthead h2, .masthead .h2 {
-    max-width: 44rem;
+    max-width: 40rem;
     font-size: 3.5rem;
   }
 }
@@ -11705,7 +11697,7 @@ body {
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
   padding: 1.25rem 2rem;
   height: auto;
-  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--bs-body-font-family);
   font-size: 80%;
   text-transform: uppercase;
   letter-spacing: 0.15rem;
@@ -11723,7 +11715,7 @@ body {
 }
 .contact-section .card h4, .contact-section .card .h4 {
   font-size: 0.8rem;
-  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--bs-body-font-family);
   text-transform: uppercase;
   letter-spacing: 0.15rem;
 }
@@ -11817,3 +11809,4 @@ svg{
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+

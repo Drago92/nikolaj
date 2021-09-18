@@ -3,7 +3,17 @@
 $(document).ready(function() {
     $('.carousel').carousel({
         interval: 4000
-    })
+    });
+    $(".masthead .button .btn-primary").mouseenter(function (){
+        $(this).animate({width:"400px"},200, function() {
+            $(this).find('i').removeClass("d-none");
+        });
+    });
+    $(".masthead .button .btn-primary").mouseleave(function (){
+        $(this).animate({width:"317px"},200, function() {
+            $(this).find('i').addClass("d-none");
+        });
+    });
 });
 $(".carousel-control-prev").click(function (){
     $(".carousel").carousel('prev');
