@@ -11603,8 +11603,12 @@ body {
 }
 .masthead .button{
   position: relative;
+<<<<<<< HEAD
   padding-left: 8%;
   bottom: 100px;
+=======
+  top:10px;
+>>>>>>> origin/gh-pages
 }
 @keyframes water {
   from {
@@ -11623,8 +11627,12 @@ body {
     max-width: 33rem;
     font-size: 2.5rem;
   }
+<<<<<<< HEAD
   .masthead .button{
     position: relative;
+  }
+=======
+>>>>>>> origin/gh-pages
 }
 @media (min-width: 992px) {
   .masthead {
@@ -11812,4 +11820,3 @@ svg{
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
-
