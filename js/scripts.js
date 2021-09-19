@@ -12,59 +12,99 @@ $(document).ready(function() {
         $(".arrow").hide();
         $(this).animate({width:"317px"},200);
     });
-});
-$(".carousel-control-prev").click(function (){
-    $(".carousel").carousel('prev');
-});
-$(".carousel-control-next").click(function (){
-    $(".carousel").carousel('next');
-});
+    var breakpoint = 840;
 
-$("#submit").click(function() {
-    let name = $("#name").val();
-    let email = $("#email").val();
-    let message = $("#message").val();
-    let betreff = $("#betreff").val();
-    let address = $("#strasse").val() + " " + $("#hsnr").val() + ", " + $("#plz").val() + " " + $("#ort").val();
-    $("#returnmessage").empty(); // To empty previous error/success message.
-    $("#errname").empty(); // To empty previous error/success message.
-    $("#errmail").empty(); // To empty previous error/success message.
-    $("#name").removeClass("err");
-    $("#email").removeClass("err");
-// Checking for blank fields.
-    if (name == '') {
-        $("#name").addClass("err");
-        $("#errname").append("Bitte geben Sie einen Namen an.");
-    } else if(email == '') {
-        $("#email").addClass("err");
-        $("#errmail").append("Bitte geben Sie eine Email Adresse an.");
-    }else{
-// Returns successful data submission message when the entered information is stored in database.
-        $.post("scripts/contact_form.php", {
-            name: name,
-            email: email,
-            message: message,
-            address: address,
-            betreff: betreff,
-            emailTo: 'k.broja@web.de'
-        }, function(data) {
-            $("#returnmessage").append(data); // Append returned message to message paragraph.
-            if (data == "Vielen Dank für Ihre Anfrage. Wir werden sie bald kontaktieren.") {
-                $("#form")[0].reset(); // To reset form fields on success.
+    if ($(window).width() < breakpoint) {
+        $('.js-slidein').removeClass('js-slidein');
+    }
+
+    $(window).scroll(function () {
+        $('.js-slidein.right').each(function (i) {
+            var bottomObject = $(this).offset().top +300;
+            var bottomWindow = $(window).scrollTop() + $(window).height();
+            if (bottomWindow > bottomObject) {
+                if(!$(this).hasClass('js-slidein-visible')) {
+                    $(this).animate({right:'0px'},600)
+                    $(this).addClass('js-slidein-visible');
+                }
+            }else{
+                if($(this).hasClass('js-slidein-visible')) {
+                    $(this).removeClass('js-slidein-visible');
+                    $(this).animate({right:'-800px'},600)
+                }
             }
         });
-        if($("#checkbox").is(':checked')) {
+    });
+    $(window).scroll(function () {
+        $('.js-slidein.left').each(function (i) {
+            var bottomObject = $(this).offset().top +300;
+            var bottomWindow = $(window).scrollTop() + $(window).height();
+            if (bottomWindow > bottomObject) {
+                if(!$(this).hasClass('js-slidein-visible')) {
+                    $(this).animate({left:'0px'},600)
+                    $(this).addClass('js-slidein-visible');
+                }
+            }else{
+                if($(this).hasClass('js-slidein-visible')) {
+                    $(this).removeClass('js-slidein-visible');
+                    $(this).animate({left:'-800px'},600)
+                }
+            }
+        });
+    });
+    $(".carousel-control-prev").click(function (){
+        $(".carousel").carousel('prev');
+    });
+    $(".carousel-control-next").click(function (){
+        $(".carousel").carousel('next');
+    });
+
+    $("#submit").click(function() {
+        let name = $("#name").val();
+        let email = $("#email").val();
+        let message = $("#message").val();
+        let betreff = $("#betreff").val();
+        let address = $("#strasse").val() + " " + $("#hsnr").val() + ", " + $("#plz").val() + " " + $("#ort").val();
+        $("#returnmessage").empty(); // To empty previous error/success message.
+        $("#errname").empty(); // To empty previous error/success message.
+        $("#errmail").empty(); // To empty previous error/success message.
+        $("#name").removeClass("err");
+        $("#email").removeClass("err");
+    // Checking for blank fields.
+        if (name == '') {
+            $("#name").addClass("err");
+            $("#errname").append("Bitte geben Sie einen Namen an.");
+        } else if(email == '') {
+            $("#email").addClass("err");
+            $("#errmail").append("Bitte geben Sie eine Email Adresse an.");
+        }else{
+    // Returns successful data submission message when the entered information is stored in database.
             $.post("scripts/contact_form.php", {
                 name: name,
                 email: email,
                 message: message,
-                emailTo: email,
                 address: address,
-                betreff: email
+                betreff: betreff,
+                emailTo: 'k.broja@web.de'
             }, function(data) {
+                $("#returnmessage").append(data); // Append returned message to message paragraph.
+                if (data == "Vielen Dank für Ihre Anfrage. Wir werden sie bald kontaktieren.") {
+                    $("#form")[0].reset(); // To reset form fields on success.
+                }
             });
+            if($("#checkbox").is(':checked')) {
+                $.post("scripts/contact_form.php", {
+                    name: name,
+                    email: email,
+                    message: message,
+                    emailTo: email,
+                    address: address,
+                    betreff: email
+                }, function(data) {
+                });
+            }
         }
-    }
+    });
 });
 //------------------VANILLAJS SCRIPT------------------------
 

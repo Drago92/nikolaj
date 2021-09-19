@@ -3585,11 +3585,12 @@ textarea.form-control-lg {
 
 .btn-link {
   font-weight: 400;
-  color: #64a19d;
-  text-decoration: underline;
+  color: var(--bs-primary);
+  border: none;
+  width: 100%;
 }
 .btn-link:hover {
-  color: #50817e;
+  color: var(--bs-secondary);
 }
 .btn-link:disabled, .btn-link.disabled {
   color: #6c757d;
@@ -4628,7 +4629,6 @@ textarea.form-control-lg {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
 }
 .card > hr {
@@ -4680,10 +4680,7 @@ textarea.form-control-lg {
   padding: 0.5rem 1rem;
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.03);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-}
-.card-header:first-child {
-  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+  border-bottom: 1px solid rgba(0,55,96, 0.125);
 }
 
 .card-footer {
@@ -6333,7 +6330,7 @@ textarea.form-control-lg {
 
 .carousel-caption {
   position: absolute;
-  bottom: 6.25rem;
+  bottom: 0rem;
   padding: 1.25rem 7%;
   margin-left: auto;
   color: #fff;
@@ -11604,7 +11601,7 @@ body {
 .masthead .button{
   position: relative;
   padding-left: 8%;
-  bottom: 100px;
+  bottom: -30px;
 }
 @keyframes water {
   from {
@@ -11615,6 +11612,14 @@ body {
   }
 }
 @media (min-width: 768px) {
+  .masthead .button{
+    position: relative;
+    padding-left: 8%;
+    bottom: 100px;
+  }
+  .masthead .carousel-caption {
+    bottom: 6.25rem;
+  }
   .masthead h1, .masthead .h1 {
     font-size: 4rem;
     line-height: 4rem;
@@ -11642,18 +11647,21 @@ body {
   }
 }
 
-.about-section {
-  padding-top: 10rem;
-
-}
-
 .groundwater-section {
   padding: 10rem 0;
+  overflow: hidden;
 }
 .groundwater-section .featured-text {
   padding: 2rem;
 }
-
+.right{
+  position: relative;
+  right: -800px;
+}
+.left{
+  position: relative;
+  left: -800px;
+}
 .geothermie-section {
   padding-top: 10rem;
   clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
@@ -11814,4 +11822,13 @@ svg{
   mask: url(../assets/img/arrow_down.svg) no-repeat center right;
   width: 23px;
   height: 23px;
+}
+.card-header .pull-right {
+  transition: .3s transform ease-in-out;
+}
+.card-header .collapsed .pull-right {
+  transform: rotate(180deg);
+}
+.pull-right {
+  float: right;
 }
