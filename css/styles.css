@@ -2425,6 +2425,28 @@ textarea.form-control-lg {
      -moz-appearance: none;
           appearance: none;
 }
+select.form-control{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.form-outline.select {
+  overflow: hidden;
+  position: relative;
+}
+.form-outline.select:after {
+  content: "\f0dd";
+  font-family:FontAwesome;
+  color: var(--bs-secondary);
+  position: absolute; right: 0; top: -10px;
+  z-index: 1;
+  text-align: center;
+  width: 10%;
+  pointer-events: none;
+  box-sizing: border-box;
+  transition: left 1s linear;
+  font-size: 2rem;
+}
 @media (prefers-reduced-motion: reduce) {
   .form-select {
     transition: none;
@@ -11663,11 +11685,7 @@ body {
   left: -800px;
 }
 .geothermie-section {
-  padding-top: 10rem;
-  clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
-}
-.geothermie-section p {
-  margin-bottom: 5rem;
+  overflow: hidden;
 }
 @media (min-width: 992px) {
   .groundwater-section .featured-text {
@@ -11829,6 +11847,17 @@ svg{
 .card-header .collapsed .pull-right {
   transform: rotate(180deg);
 }
+.arrowUp:after {
+  transform: rotate(180deg);
+  top:0px !important;
+}
 .pull-right {
   float: right;
+}
+ul {
+  padding-left:1rem;
+  list-style: none;
+}
+.card-body ul li:before {
+  content: "\279C";
 }

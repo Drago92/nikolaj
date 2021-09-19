@@ -61,15 +61,21 @@ $(document).ready(function() {
 
     $("#submit").click(function() {
         let name = $("#name").val();
+        let firma = $("#firma").val();
         let email = $("#email").val();
         let message = $("#message").val();
         let betreff = $("#betreff").val();
-        let address = $("#strasse").val() + " " + $("#hsnr").val() + ", " + $("#plz").val() + " " + $("#ort").val();
+        let address = $("#strasse").val() + ", " + $("#plz").val();
+        let kunde = ($("#checkgewerbe").prop('checked'))? "Gewerbekunde":"Privatkunde";
         $("#returnmessage").empty(); // To empty previous error/success message.
         $("#errname").empty(); // To empty previous error/success message.
         $("#errmail").empty(); // To empty previous error/success message.
+        $("#errmessage").empty(); // To empty previous error/success message.
+        $("#errfirma").empty(); // To empty previous error/success message.
         $("#name").removeClass("err");
         $("#email").removeClass("err");
+        $("#message").removeClass("err");
+        $("#firma").removeClass("err");
     // Checking for blank fields.
         if (name == '') {
             $("#name").addClass("err");
@@ -77,33 +83,51 @@ $(document).ready(function() {
         } else if(email == '') {
             $("#email").addClass("err");
             $("#errmail").append("Bitte geben Sie eine Email Adresse an.");
+        }else if(message == '') {
+            $("#message").addClass("err");
+            $("#errmessage").append("Bitte geben Sie eine Nachricht an.");
+        }else if(kunde == 'Gewerbekunde'&& firma=='') {
+            $("#firma").addClass("err");
+            $("#errfirma").append("Bitte geben Sie Ihre Firma an.");
         }else{
-    // Returns successful data submission message when the entered information is stored in database.
+            // Returns successful data submission message when the entered information is stored in database.
             $.post("scripts/contact_form.php", {
                 name: name,
+                firma: firma,
                 email: email,
                 message: message,
                 address: address,
-                betreff: betreff,
+                betreff: kunde + ': ' + betreff,
                 emailTo: 'k.broja@web.de'
-            }, function(data) {
+            }, function (data) {
                 $("#returnmessage").append(data); // Append returned message to message paragraph.
                 if (data == "Vielen Dank für Ihre Anfrage. Wir werden sie bald kontaktieren.") {
                     $("#form")[0].reset(); // To reset form fields on success.
                 }
             });
-            if($("#checkbox").is(':checked')) {
-                $.post("scripts/contact_form.php", {
-                    name: name,
-                    email: email,
-                    message: message,
-                    emailTo: email,
-                    address: address,
-                    betreff: email
-                }, function(data) {
-                });
-            }
         }
+    });
+    $("#checkgewerbe").click(function (){
+        if($("#checkgewerbe").prop('checked')){
+            $("#checkgewerbe").prop('checked', true);
+            $("#checkprivat").prop('checked', false);
+        }else {
+            $("#checkgewerbe").prop('checked', false);
+            $("#checkprivat").prop('checked', true);
+        }
+        $("#divFirma").toggleClass("d-none");
+        $("#divName").toggleClass("col-sm-6");
+    });
+    $("#checkprivat").click(function (){
+        if($("#checkprivat").prop('checked')){
+            $("#checkgewerbe").prop('checked', false);
+            $("#checkprivat").prop('checked', true);
+        }else {
+            $("#checkgewerbe").prop('checked', true);
+            $("#checkprivat").prop('checked', false);
+        }
+        $("#divFirma").toggleClass("d-none");
+        $("#divName").toggleClass("col-sm-6");
     });
 
     $(window).bind('scroll', function() {
@@ -121,6 +145,22 @@ $(document).ready(function() {
                 navElem.removeClass('active');
             }
         })
+    });
+    $(".form-outline select").on({
+        "change": function() {
+            $(this).blur();
+
+        },
+        'focus': function() {
+            $(".form-outline.select").addClass("arrowUp");
+        },
+        "blur": function() {
+            $(".form-outline.select").removeClass("arrowUp");
+        },
+        "keyup": function(e) {
+            if (e.keyCode == 27)
+            $(".form-outline.select").addClass("arrowUp");
+        }
     });
 });
 //------------------VANILLAJS SCRIPT------------------------
