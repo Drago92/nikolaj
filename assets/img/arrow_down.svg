@@ -3,23 +3,32 @@
 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 850.39 850.39" style="enable-background:new 0 0 850.39 850.39;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;stroke:#010202;stroke-miterlimit:10;}
+	.st0{display:none;}
+	.st1{display:inline;fill:none;stroke:#010202;stroke-width:15;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#010202;stroke-width:15;stroke-miterlimit:10;}
 </style>
-<g>
-	<path class="st0" d="M412,462"/>
+<g class="st0">
+	<path class="st1" d="M433.46,843.87"/>
 </g>
 <g>
-	<path class="st0" d="M412,266"/>
+	<path class="st2" d="M433.46,9.89"/>
 </g>
-<line class="st0" x1="350.5" y1="401.5" x2="411.5" y2="462.5"/>
-<line class="st0" x1="473" y1="401.58" x2="410.83" y2="462.45"/>
+<line class="st2" x1="8.16" y1="525.95" x2="429.13" y2="843.99"/>
+<line class="st2" x1="842.63" y1="522.68" x2="420" y2="844"/>
+<line class="st2" x1="842.59" y1="521.63" x2="420" y2="844"/>
 <g>
-	<line class="st0" x1="411.25" y1="461.5" x2="411.25" y2="264.5"/>
-</g>
-<g>
-	<path class="st0" d="M401.25,264.5"/>
+	<line class="st2" x1="424.57" y1="841.99" x2="431.59" y2="3.52"/>
 </g>
 <g>
-	<line class="st0" x1="411.25" y1="461.5" x2="411.25" y2="264.5"/>
+	<path class="st2" d="M359.53,3.5"/>
+</g>
+<g>
+	<line class="st2" x1="424.57" y1="841.99" x2="431.59" y2="3.52"/>
+</g>
+<g>
+	<line class="st2" x1="424.78" y1="841.99" x2="431.81" y2="3.52"/>
+</g>
+<g>
+	<line class="st2" x1="424.78" y1="841.99" x2="431.81" y2="3.52"/>
 </g>
 </svg>
