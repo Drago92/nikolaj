@@ -6,6 +6,7 @@
 	.st0{display:none;}
 	.st1{display:inline;fill:none;stroke:#010202;stroke-width:15;stroke-miterlimit:10;}
 	.st2{fill:none;stroke:#010202;stroke-width:15;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#010202;stroke-width:20;stroke-miterlimit:10;}
 </style>
 <g class="st0">
 	<path class="st1" d="M433.46,843.87"/>
@@ -13,22 +14,22 @@
 <g>
 	<path class="st2" d="M433.46,9.89"/>
 </g>
-<line class="st2" x1="8.16" y1="525.95" x2="429.13" y2="843.99"/>
-<line class="st2" x1="842.63" y1="522.68" x2="420" y2="844"/>
-<line class="st2" x1="842.59" y1="521.63" x2="420" y2="844"/>
+<line class="st3" x1="8.17" y1="524.68" x2="429.15" y2="841.96"/>
+<line class="st3" x1="842.64" y1="521.43" x2="420.02" y2="841.97"/>
+<line class="st3" x1="842.6" y1="520.39" x2="420.02" y2="841.97"/>
 <g>
-	<line class="st2" x1="424.57" y1="841.99" x2="431.59" y2="3.52"/>
+	<line class="st3" x1="424.65" y1="831.99" x2="431.59" y2="3.52"/>
 </g>
 <g>
 	<path class="st2" d="M359.53,3.5"/>
 </g>
 <g>
-	<line class="st2" x1="424.57" y1="841.99" x2="431.59" y2="3.52"/>
+	<line class="st3" x1="424.65" y1="831.99" x2="431.59" y2="3.52"/>
 </g>
 <g>
-	<line class="st2" x1="424.78" y1="841.99" x2="431.81" y2="3.52"/>
+	<line class="st3" x1="424.87" y1="831.98" x2="431.81" y2="3.52"/>
 </g>
 <g>
-	<line class="st2" x1="424.78" y1="841.99" x2="431.81" y2="3.52"/>
+	<line class="st3" x1="424.87" y1="831.98" x2="431.81" y2="3.52"/>
 </g>
 </svg>
