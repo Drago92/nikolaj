@@ -8035,17 +8035,20 @@ select.form-control{
 
 .bg-blue {
   --bs-bg-opacity: 1;
-  background-color: rgba(0,55,96,0.9) !important;
+  background-color: var(--bs-primary) !important;
+  bottom: 900px;
 }
 
 .bg-lightblue {
   --bs-bg-opacity: 1;
   background-color: rgba(113,194,241,0.9) !important;
+  bottom: 500px;
 }
 
 .bg-orange {
   --bs-bg-opacity: 1;
-  background-color: rgba(255, 170, 41,0.9) !important;
+  background-color: var(--bs-secondary) !important;
+  bottom: 100px;
 }
 
 .bg-white {
@@ -11490,6 +11493,7 @@ html {
 }
 body {
   letter-spacing: 0.0625em;
+  position: relative;
   overflow: overlay;
 }
 ::-webkit-scrollbar {
@@ -11670,7 +11674,7 @@ body {
 }
 
 .groundwater-section {
-  padding: 10rem 0;
+  padding-top:5rem;
   overflow: hidden;
 }
 .groundwater-section .featured-text {
@@ -11686,6 +11690,7 @@ body {
 }
 .geothermie-section {
   overflow: hidden;
+  padding-top: 10rem;
 }
 @media (min-width: 992px) {
   .groundwater-section .featured-text {
@@ -11728,8 +11733,7 @@ body {
 
 .contact-section {
   padding-top: 5rem;
-  clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
-
+  margin-bottom: 5rem;
 }
 .contact-section .card {
   border: 0;
@@ -11766,7 +11770,8 @@ body {
 }
 
 .footer {
-  padding-top: 5rem;
+  padding-top: 3rem;
+  background-color: var(--bs-primary);
 }
 .err{
   border: solid 1px red;
@@ -11860,4 +11865,14 @@ ul {
 }
 .card-body ul li:before {
   content: "\279C";
+}
+.vl {
+  border-right: 3px solid var(--bs-secondary);
+}
+.polygon{
+  position: absolute;
+  width: 40px;
+  height: 300px;
+  z-index: 100;
+  clip-path: polygon(0 5%, 75% 0, 75% 95%, 0 100%);
 }

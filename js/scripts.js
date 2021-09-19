@@ -134,8 +134,8 @@ $(document).ready(function() {
         let currentTop = $(window).scrollTop();
         let elems = $('.scrollspy');
         elems.each(function(index){
-            let elemTop 	= $(this).offset().top -74;
-            let elemBottom 	= elemTop + $(this).height();
+            let elemTop 	= $(this).offset().top -100;
+            let elemBottom 	= elemTop + $(this).height()+90;
             let id 		= $(this).attr('id');
             let navElem = $('a[href="#' + id + '"]');
             if(currentTop >= elemTop && elemBottom > 0){
