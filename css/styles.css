@@ -43,8 +43,8 @@
   --bs-dark: #212529;
   --bs-black: #000;
   --bs-white: #fff;
-  --bs-primary-rgb: 100, 161, 157;
-  --bs-secondary-rgb: 235, 235, 235;
+  --bs-primary: #003760;
+  --bs-secondary: #FFAA29;
   --bs-success-rgb: 103, 194, 156;
   --bs-info-rgb: 28, 171, 196;
   --bs-warning-rgb: 228, 198, 98;
@@ -3030,9 +3030,9 @@ textarea.form-control-lg {
 
 .btn-primary {
   display: flex;
-  color: #003761;
-  background-color: #FFAA29;
-  border-color: #FFAA29;
+  color: var(--bs-primary);
+  background-color: var(--bs-secondary);
+  border-color: var(--bs-secondary);
   text-align: left;
   align-items: center;
   white-space: nowrap;
@@ -3040,8 +3040,8 @@ textarea.form-control-lg {
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #003761;
-  border-color: #003761;
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;
@@ -7885,13 +7885,11 @@ textarea.form-control-lg {
 
 /* rtl:end:remove */
 .text-primary {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
+  color: var(--bs-primary) !important;
 }
 
 .text-secondary {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important;
+  color: var(--bs-secondary) !important;
 }
 
 .text-success {
@@ -11646,11 +11644,7 @@ body {
 
 .about-section {
   padding-top: 10rem;
-  clip-path: polygon(0 0%, 100% 0%, 100% 95%, 0% 100%);
 
-}
-.about-section p {
-  margin-bottom: 5rem;
 }
 
 .groundwater-section {
