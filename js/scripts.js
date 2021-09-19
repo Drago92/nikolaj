@@ -6,13 +6,11 @@ $(document).ready(function() {
     });
     $(".masthead .button .btn-primary").mouseenter(function (){
         $(this).animate({width:"400px"},200, function() {
-            $(this).find('i').removeClass("d-none");
+            $(".arrow").fadeIn("fast");
         });
-    });
-    $(".masthead .button .btn-primary").mouseleave(function (){
-        $(this).animate({width:"317px"},200, function() {
-            $(this).find('i').addClass("d-none");
-        });
+    }).mouseleave(function (){
+        $(".arrow").hide();
+        $(this).animate({width:"317px"},200);
     });
 });
 $(".carousel-control-prev").click(function (){

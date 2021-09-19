@@ -3034,7 +3034,9 @@ textarea.form-control-lg {
   background-color: #FFAA29;
   border-color: #FFAA29;
   text-align: left;
-  align-content: center;
+  align-items: center;
+  white-space: nowrap;
+  justify-content: space-between;
 }
 .btn-primary:hover {
   color: #fff;
@@ -11637,7 +11639,7 @@ body {
     letter-spacing: 0.8rem;
   }
   .masthead h2, .masthead .h2 {
-    max-width: 40rem;
+    max-width: 45rem;
     font-size: 3.5rem;
   }
 }
@@ -11808,4 +11810,14 @@ svg{
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+
+.arrow{
+  background-color: #FFAA29;
+  display: flex;
+  position: relative;
+  -webkit-mask: url(../assets/img/arrow_down.svg) no-repeat center right;
+  mask: url(../assets/img/arrow_down.svg) no-repeat center right;
+  width: 23px;
+  height: 23px;
 }
