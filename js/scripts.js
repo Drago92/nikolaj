@@ -105,6 +105,23 @@ $(document).ready(function() {
             }
         }
     });
+
+    $(window).bind('scroll', function() {
+        let currentTop = $(window).scrollTop();
+        let elems = $('.scrollspy');
+        elems.each(function(index){
+            let elemTop 	= $(this).offset().top -74;
+            let elemBottom 	= elemTop + $(this).height();
+            let id 		= $(this).attr('id');
+            let navElem = $('a[href="#' + id + '"]');
+            if(currentTop >= elemTop && elemBottom > 0){
+                navElem.addClass('active');
+            }
+            if(currentTop >= elemBottom || currentTop <= elemTop){
+                navElem.removeClass('active');
+            }
+        })
+    });
 });
 //------------------VANILLAJS SCRIPT------------------------
 
@@ -154,13 +171,13 @@ window.addEventListener('DOMContentLoaded', event => {
     document.addEventListener('scroll', navbarShrink);
 
     // Activate Bootstrap scrollspy on the main nav element
-    const mainNav = document.body.querySelector('#mainNav');
-    if (mainNav) {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#mainNav',
-            offset: 74,
-        });
-    };
+    // const mainNav = document.body.querySelector('#mainNav');
+    // if (mainNav) {
+    //     new bootstrap.ScrollSpy(document.body, {
+    //         target: '#mainNav',
+    //         offset: 74,
+    //     });
+    // };
 
     // Collapse responsive navbar when toggler is visible
     const navbarToggler = document.body.querySelector('.navbar-toggler');
