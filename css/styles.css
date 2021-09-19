@@ -8178,7 +8178,9 @@ select.form-control{
   .float-sm-start {
     float: left !important;
   }
-
+  .polygon{
+    width: 40px;
+  }
   .float-sm-end {
     float: right !important;
   }
@@ -11795,7 +11797,7 @@ body {
 }
 
 #impressum{
-  padding-top: 5rem;
+  padding-top: 10rem;
 }
 
 #btn-back-to-top {
@@ -11871,7 +11873,7 @@ ul {
 }
 .polygon{
   position: absolute;
-  width: 40px;
+  width: 30px;
   height: 300px;
   z-index: 100;
   clip-path: polygon(0 5%, 75% 0, 75% 95%, 0 100%);
