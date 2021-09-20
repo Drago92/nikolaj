@@ -11499,7 +11499,7 @@ body {
   overflow: overlay;
 }
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 15px;
 }
 
 ::-webkit-scrollbar-thumb {
