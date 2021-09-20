@@ -11682,14 +11682,6 @@ body {
 .groundwater-section .featured-text {
   padding: 2rem;
 }
-.right{
-  position: relative;
-  right: -800px;
-}
-.left{
-  position: relative;
-  left: -800px;
-}
 .geothermie-section {
   overflow: hidden;
   padding-top: 10rem;
@@ -11698,6 +11690,14 @@ body {
   .groundwater-section .featured-text {
     padding: 0 0 0 2rem;
     border-left: 0.5rem solid #64a19d;
+  }
+  .right{
+    position: relative;
+    right: -800px;
+  }
+  .left{
+    position: relative;
+    left: -800px;
   }
 }
 .groundwater-section .project-text {
