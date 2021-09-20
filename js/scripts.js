@@ -130,7 +130,7 @@ $(document).ready(function() {
             $("#checkprivat").prop('checked', false);
         }
         $("#divFirma").toggleClass("d-none");
-        $("#divName").toggleClass("col-sm-6");
+        $("#divName").toggleClass("col-xxl-6");
     });
 
     $(window).bind('scroll', function() {
