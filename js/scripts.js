@@ -1,18 +1,22 @@
 
 //------------------JQUERY SCRIPT------------------------
 $(document).ready(function() {
+    var breakpoint = 840;
     $('.carousel').carousel({
         interval: 4000
     });
     $(".masthead .button .btn-primary").mouseenter(function (){
-        $(this).animate({width:"400px"},200, function() {
-            $(".arrow").fadeIn("fast");
-        });
+        if ($(window).width() < breakpoint) {
+            $(this).animate({width: "400px"}, 200, function () {
+                $(".arrow").fadeIn("fast");
+            });
+        }
     }).mouseleave(function (){
-        $(".arrow").hide();
-        $(this).animate({width:"317px"},200);
+        if ($(window).width() < breakpoint) {
+            $(".arrow").hide();
+            $(this).animate({width: "317px"}, 200);
+        }
     });
-    var breakpoint = 840;
 
     if ($(window).width() < breakpoint) {
         $('.js-slidein').removeClass('js-slidein');
@@ -165,30 +169,6 @@ $(document).ready(function() {
 });
 //------------------VANILLAJS SCRIPT------------------------
 
-let mybutton = document.getElementById("btn-back-to-top");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
-    scrollFunction();
-};
-
-function scrollFunction() {
-    if (
-        document.body.scrollTop > 20 ||
-        document.documentElement.scrollTop > 20
-    ) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
-}
-// When the user clicks on the button, scroll to the top of the document
-mybutton.addEventListener("click", backToTop);
-
-function backToTop() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
 window.addEventListener('DOMContentLoaded', event => {
     // Navbar shrink function
     var navbarShrink = function () {
@@ -209,15 +189,6 @@ window.addEventListener('DOMContentLoaded', event => {
 
     // Shrink the navbar when page is scrolled
     document.addEventListener('scroll', navbarShrink);
-
-    // Activate Bootstrap scrollspy on the main nav element
-    // const mainNav = document.body.querySelector('#mainNav');
-    // if (mainNav) {
-    //     new bootstrap.ScrollSpy(document.body, {
-    //         target: '#mainNav',
-    //         offset: 74,
-    //     });
-    // };
 
     // Collapse responsive navbar when toggler is visible
     const navbarToggler = document.body.querySelector('.navbar-toggler');
