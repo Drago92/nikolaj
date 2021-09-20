@@ -11674,9 +11674,6 @@ body {
     font-size: 3.5rem;
   }
 }
-#groundwaterImg img{
-  width:90% !important;
-}
 .groundwater-section {
   padding-top:5rem;
   overflow: hidden;
@@ -11689,9 +11686,6 @@ body {
   padding-top: 10rem;
 }
 @media (min-width: 992px) {
-  #groundwaterImg img{
-    width:100% !important;
-  }
   .groundwater-section .featured-text {
     padding: 0 0 0 2rem;
     border-left: 0.5rem solid #64a19d;
