@@ -1,23 +1,22 @@
 
 //------------------JQUERY SCRIPT------------------------
 $(document).ready(function() {
-    var breakpoint = 840;
+    var breakpoint = 860;
     $('.carousel').carousel({
         interval: 4000
     });
     $(".masthead .button .btn-primary").mouseenter(function (){
-        if ($(window).width() < breakpoint) {
+        if ($(window).width() > breakpoint) {
             $(this).animate({width: "400px"}, 200, function () {
                 $(".arrow").fadeIn("fast");
             });
         }
     }).mouseleave(function (){
-        if ($(window).width() < breakpoint) {
+        if ($(window).width() > breakpoint) {
             $(".arrow").hide();
             $(this).animate({width: "317px"}, 200);
         }
     });
-
     if ($(window).width() < breakpoint) {
         $('.js-slidein').removeClass('js-slidein');
     }
