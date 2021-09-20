@@ -3610,6 +3610,7 @@ select.form-control{
   color: var(--bs-primary);
   border: none;
   width: 100%;
+  background-color: transparent;
 }
 .btn-link:hover {
   color: var(--bs-secondary);
@@ -4701,7 +4702,6 @@ select.form-control{
 .card-header {
   padding: 0.5rem 1rem;
   margin-bottom: 0;
-  background-color: rgba(0, 0, 0, 0.03);
   border-bottom: 1px solid rgba(0,55,96, 0.125);
 }
 
