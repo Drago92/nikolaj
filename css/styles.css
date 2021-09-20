@@ -11628,8 +11628,8 @@ body {
 }
 .masthead .button{
   position: relative;
-  padding-left: 0px;
   bottom: -100px;
+  padding-left: 8%;
 }
 @keyframes water {
   from {
@@ -11642,7 +11642,6 @@ body {
 @media (min-width: 768px) {
   .masthead .button{
     position: relative;
-    padding-left: 8%;
     bottom: 100px;
   }
   .masthead .carousel-caption {
