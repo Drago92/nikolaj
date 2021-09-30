@@ -115,6 +115,13 @@ h1, .h1 {
   font-size: calc(1.375rem + 1.5vw);
 }
 @media (min-width: 1200px) {
+  #groundwaterText{
+    padding-top: 14rem !important;
+  }
+  .carousel-item img{
+    width: 100%;
+    height: unset !important;
+  }
   h1, .h1 {
     font-size: 2.5rem;
   }
@@ -238,11 +245,11 @@ sup {
 }
 
 a {
-  color: #64a19d;
+  color: #70C1EF;
   text-decoration: underline;
 }
 a:hover {
-  color: #50817e;
+  color: var(--bs-secondary) !important;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -4650,7 +4657,7 @@ select.form-control{
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: transparent;
   background-clip: border-box;
   border-radius: 0.25rem;
 }
@@ -4700,11 +4707,13 @@ select.form-control{
 }
 
 .card-header {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0rem;
   margin-bottom: 0;
   border-bottom: 1px solid rgba(0,55,96, 0.125);
 }
-
+.card-header button{
+  padding-left: 0;
+}
 .card-footer {
   padding: 0.5rem 1rem;
   background-color: rgba(0, 0, 0, 0.03);
@@ -8032,7 +8041,10 @@ select.form-control{
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
 }
-
+.bg-lightgray {
+  --bs-bg-opacity: 1;
+  background-color: #fAfAfA !important;
+}
 .bg-blue {
   --bs-bg-opacity: 1;
   background-color: var(--bs-primary) !important;
@@ -11494,22 +11506,20 @@ html {
   scrollbar-width: thin;
 }
 body {
-  letter-spacing: 0.0625em;
   position: relative;
   overflow: overlay;
 }
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #003760;
-  border-radius: 10px;
+  background: rgba(0, 55, 96, 0.85);
 }
-::-webkit-scrollbar-track{
-  background: rgba(0, 0, 0, 0);
+/* Track */
+::-webkit-scrollbar-track {
+  background: #e1e1e1;
 }
-
 
 #mainNav {
   min-height: 3.5rem;
@@ -11537,7 +11547,36 @@ body {
   outline: none;
   background-color: transparent;
 }
+.navbar-brand img{
+  padding-top: 0.4rem;
+}
+.carousel-item img{
+  height: unset;
+  position: unset;
+  width: 100%;
+}
+#groundwaterText{
+  padding-top: 0rem;
+}
+#geothermieText{
+  padding-top: 0rem;
+}
+.btn-link svg{
+  color: var(--bs-secondary)!important;
+}
 @media (min-width: 992px) {
+  #groundwaterText{
+    padding-top: 11rem;
+  }
+  #geothermieText{
+    padding-top: 5rem;
+  }
+  .carousel-item img{
+    height: 100%;
+    width: unset;
+    position: absolute;
+  }
+
   #mainNav {
     padding-top: 0;
     padding-bottom: 0;
@@ -11548,12 +11587,14 @@ body {
     transition: background-color 0.3s ease-in-out;
   }
   #mainNav .navbar-brand {
-    padding: 0.5rem 0;
+    padding: 0;
     color: rgba(255, 255, 255, 0.5);
   }
+
   #mainNav .nav-link {
     transition: none;
-    color: #003760;
+    color: var(--bs-primary);
+    font-size: 1.3rem;
     padding: 1.5rem 1.5rem 1.25rem;
     border-bottom: 0.25rem solid transparent;
   }
@@ -11570,7 +11611,7 @@ body {
     color: #000;
   }
   #mainNav.navbar-shrink .nav-link {
-    color: #003760;
+    color: var(--bs-primary);
     padding: 1.5rem 1.5rem 1.25rem;
     border-bottom: 0.25rem solid transparent;
   }
@@ -11592,7 +11633,6 @@ body {
   padding: 1.25rem 2rem;
   font-family: var(--bs-body-font-family);
   font-size: 100%;
-  letter-spacing: 0.15rem;
   border: 0;
 }
 
@@ -11611,7 +11651,6 @@ body {
   font-family: var(--bs-body-font-family);
   font-size: 2.5rem;
   line-height: 2.5rem;
-  letter-spacing: 0.8rem;
   background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -11629,14 +11668,6 @@ body {
   position: relative;
   bottom: -100px;
   padding-left: 8%;
-}
-@keyframes water {
-  from {
-    background-position: left 0 top 0;
-  }
-  to {
-    background-position: left 1000px top 0;
-  }
 }
 @media (min-width: 768px) {
   .masthead .button{
@@ -11665,7 +11696,6 @@ body {
   .masthead h1, .masthead .h1 {
     font-size: 6.5rem;
     line-height: 6.5rem;
-    letter-spacing: 0.8rem;
   }
   .masthead h2, .masthead .h2 {
     max-width: 45rem;
@@ -11730,7 +11760,6 @@ body {
   font-family: var(--bs-body-font-family);
   font-size: 80%;
   text-transform: uppercase;
-  letter-spacing: 0.15rem;
   border: 0;
 }
 
@@ -11748,7 +11777,6 @@ body {
   font-size: 0.8rem;
   font-family: var(--bs-body-font-family);
   text-transform: uppercase;
-  letter-spacing: 0.15rem;
 }
 .contact-section .card hr {
   border-color: #64a19d;
