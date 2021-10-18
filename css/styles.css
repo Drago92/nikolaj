@@ -11548,7 +11548,7 @@ body {
   background-color: transparent;
 }
 .navbar-brand img{
-  padding-top: 0.4rem;
+  margin-top: 0.4rem;
 }
 .carousel-item img{
   height: unset;
