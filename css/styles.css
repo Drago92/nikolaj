@@ -11557,6 +11557,7 @@ body {
   background-color: transparent;
 }
 .navbar-brand img{
+  padding-left: 0.8rem;
   margin-top: 0.4rem;
 }
 .carousel-item img{
@@ -11577,6 +11578,9 @@ body {
 @media (min-width: 992px) {
   #groundwaterText{
     padding-top: 11rem;
+  }
+  .navbar-brand img{
+    padding-left: 2.25rem;
   }
   #geothermieText{
     padding-top: 5rem;
