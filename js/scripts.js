@@ -7,14 +7,14 @@ $(document).ready(function() {
     });
     $(".masthead .button .btn-primary").mouseenter(function (){
         if ($(window).width() > breakpoint) {
-            $(this).animate({width: "400px"}, 200, function () {
+            $(this).animate({width: "300px"}, 200, function () {
                 $(".arrow").fadeIn("fast");
             });
         }
     }).mouseleave(function (){
         if ($(window).width() > breakpoint) {
             $(".arrow").hide();
-            $(this).animate({width: "317px"}, 200);
+            $(this).animate({width: "225px"}, 200);
         }
     });
     if ($(window).width() < breakpoint) {

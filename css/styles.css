@@ -11630,7 +11630,7 @@ body {
 
 .btn {
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
-  padding: 1.25rem 2rem;
+  padding: 1.25rem 1.25rem;
   font-family: var(--bs-body-font-family);
   font-size: 100%;
   border: 0;
@@ -11802,7 +11802,7 @@ body {
   color: #fff;
 }
 .contact-section #submit {
-  padding: 1.25rem 1rem;
+  padding: 1.25rem 1.25rem;
 }
 .footer {
   padding-top: 3rem;
