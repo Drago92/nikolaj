@@ -6363,7 +6363,7 @@ select.form-control{
 .carousel-caption {
   position: absolute;
   bottom: 0rem;
-  padding: 1.25rem 13%;
+  padding: 1.25rem 11%;
   margin-left: auto;
   color: #fff;
   text-align: left;
@@ -8049,19 +8049,16 @@ select.form-control{
 .bg-blue {
   --bs-bg-opacity: 1;
   background-color: var(--bs-primary) !important;
-  top: 3500px;
 }
 
 .bg-lightblue {
   --bs-bg-opacity: 1;
   background-color: rgba(113,194,241,0.9) !important;
-  top: 3900px;
 }
 
 .bg-orange {
   --bs-bg-opacity: 1;
   background-color: var(--bs-secondary) !important;
-  top: 4300px;
 }
 
 .bg-white {
@@ -11557,7 +11554,6 @@ body {
   background-color: transparent;
 }
 .navbar-brand img{
-  padding-left: 0.8rem;
   margin-top: 0.4rem;
 }
 .carousel-item img{
@@ -11578,9 +11574,6 @@ body {
 @media (min-width: 992px) {
   #groundwaterText{
     padding-top: 11rem;
-  }
-  .navbar-brand img{
-    padding-left: 2.25rem;
   }
   #geothermieText{
     padding-top: 5rem;
@@ -11680,7 +11673,7 @@ body {
 .masthead .button{
   position: relative;
   bottom: -100px;
-  padding-left: 14%;
+  padding-left: 12%;
 }
 .masthead .carousel-caption {
   background: radial-gradient(rgba(0, 55, 96, 0.2),rgba(0, 55, 96, 0.0));
@@ -11927,9 +11920,15 @@ ul {
   border-right: 3px solid var(--bs-secondary);
 }
 .polygon{
-  position: absolute;
   width: 30px;
   height: 300px;
   z-index: 100;
   clip-path: polygon(0 5%, 75% 0, 75% 95%, 0 100%);
+  margin-bottom: 115px;
+}
+
+#sideLogo{
+  position: relative;
+  height: 0px;
+  bottom: 1280px;
 }
