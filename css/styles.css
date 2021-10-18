@@ -11702,14 +11702,14 @@ body {
 }
 @media (min-width: 992px) {
   .masthead {
-    height: 100vh;
+    height: 90vh;
   }
   .masthead .button{
     position: relative;
-    bottom: 10rem;
+    bottom: 6rem;
   }
   .masthead .carousel-caption {
-    bottom: 10rem;
+    bottom: 6rem;
   }
   .masthead h1, .masthead .h1 {
     font-size: 6.5rem;
