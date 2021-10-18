@@ -6261,7 +6261,7 @@ select.form-control{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 15%;
+  width: 5%;
   padding: 0;
   color: #fff;
   text-align: center;
@@ -6363,7 +6363,7 @@ select.form-control{
 .carousel-caption {
   position: absolute;
   bottom: 0rem;
-  padding: 1.25rem 7%;
+  padding: 1.25rem 3%;
   margin-left: auto;
   color: #fff;
   text-align: left;
@@ -11563,6 +11563,7 @@ body {
   height: unset;
   position: unset;
   width: 100%;
+  top:-25px;
 }
 #groundwaterText{
   padding-top: 0rem;
@@ -11675,15 +11676,17 @@ body {
 .masthead .button{
   position: relative;
   bottom: -100px;
-  padding-left: 8%;
+  padding-left: 4%;
+}
+.masthead .carousel-caption {
+  background: radial-gradient(rgba(0, 55, 96, 0.2),rgba(0, 55, 96, 0.0));
+  backdrop-filter: blur( 1px );
+  -webkit-backdrop-filter: blur( 1px );
 }
 @media (min-width: 768px) {
   .masthead .button{
     position: relative;
-    bottom: 10rem;
-  }
-  .masthead .carousel-caption {
-    bottom: 10rem;
+    bottom: -1rem;
   }
   .masthead h1, .masthead .h1 {
     font-size: 4rem;
@@ -11700,6 +11703,13 @@ body {
 @media (min-width: 992px) {
   .masthead {
     height: 100vh;
+  }
+  .masthead .button{
+    position: relative;
+    bottom: 10rem;
+  }
+  .masthead .carousel-caption {
+    bottom: 10rem;
   }
   .masthead h1, .masthead .h1 {
     font-size: 6.5rem;
