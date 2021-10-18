@@ -11668,12 +11668,12 @@ body {
   max-width: 20rem;
   font-size: 1.5rem;
   color: #fff;
-  padding-left: 14px;
+  padding-left: 10px;
 }
 .masthead .button{
   position: relative;
   bottom: -100px;
-  padding-left: 8%;
+  padding-left: 7.8%;
 }
 .masthead .carousel-caption {
   background: radial-gradient(rgba(0, 55, 96, 0.2),rgba(0, 55, 96, 0.0));
