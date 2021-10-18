@@ -136,8 +136,8 @@ $(document).ready(function() {
     $('#body').bind('scroll', function() {
         let elems = $('.scrollspy');
         elems.each(function(index){
-            let elemTop 	= $(this).offset().top - 130;
-            let elemBottom 	= elemTop + $(this).height();
+            let elemTop 	= $(this).offset().top - 180;
+            let elemBottom 	= elemTop + $(this).height()+75;
             let id 		= $(this).attr('id');
             let navElem = $('a[href="#' + id + '"]');
             if(elemTop <= 0 && elemBottom > 0){
