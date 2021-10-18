@@ -114,12 +114,12 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 h1, .h1 {
   font-size: calc(1.375rem + 1.5vw);
 }
-@media (min-width: 1200px) {
+@media (min-width: 1385px) {
   #groundwaterText{
     padding-top: 14rem !important;
   }
   .carousel-item img{
-    width: 100%;
+    width: 100% !important;
     height: unset !important;
   }
   h1, .h1 {
