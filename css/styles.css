@@ -6363,7 +6363,7 @@ select.form-control{
 .carousel-caption {
   position: absolute;
   bottom: 0rem;
-  padding: 1.25rem 3%;
+  padding: 1.25rem 13%;
   margin-left: auto;
   color: #fff;
   text-align: left;
@@ -11680,7 +11680,7 @@ body {
 .masthead .button{
   position: relative;
   bottom: -100px;
-  padding-left: 4%;
+  padding-left: 14%;
 }
 .masthead .carousel-caption {
   background: radial-gradient(rgba(0, 55, 96, 0.2),rgba(0, 55, 96, 0.0));
