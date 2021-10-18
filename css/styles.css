@@ -4193,6 +4193,7 @@ select.form-control{
   justify-content: space-between;
 }
 .navbar-brand {
+  display: contents;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
   margin-right: 1rem;
@@ -8048,19 +8049,19 @@ select.form-control{
 .bg-blue {
   --bs-bg-opacity: 1;
   background-color: var(--bs-primary) !important;
-  bottom: 900px;
+  top: 3350px;
 }
 
 .bg-lightblue {
   --bs-bg-opacity: 1;
   background-color: rgba(113,194,241,0.9) !important;
-  bottom: 500px;
+  top: 3750px;
 }
 
 .bg-orange {
   --bs-bg-opacity: 1;
   background-color: var(--bs-secondary) !important;
-  bottom: 100px;
+  top: 4150px;
 }
 
 .bg-white {
@@ -11507,7 +11508,15 @@ html {
 }
 body {
   position: relative;
+  overflow: hidden;
+}
+#body{
+  position: fixed;
+  height: calc(100% - 5rem);
+  top:5rem;
+  width: 100%;
   overflow: overlay;
+  scroll-behavior: smooth;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -11621,7 +11630,7 @@ body {
   #mainNav.navbar-shrink .nav-link:active {
     color: #71C2F1;
   }
-  #mainNav.navbar-shrink .nav-link.active {
+  #mainNav .nav-link.active {
     font-weight: 900;
     outline: none;
     border-bottom: 0.25rem solid #FFAA29;
@@ -11641,7 +11650,6 @@ body {
   width: 100%;
   height: auto;
   min-height: 35rem;
-  padding: 5rem 0 0 0;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -11672,10 +11680,10 @@ body {
 @media (min-width: 768px) {
   .masthead .button{
     position: relative;
-    bottom: 100px;
+    bottom: 10rem;
   }
   .masthead .carousel-caption {
-    bottom: 6.25rem;
+    bottom: 10rem;
   }
   .masthead h1, .masthead .h1 {
     font-size: 4rem;

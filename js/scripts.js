@@ -21,40 +21,40 @@ $(document).ready(function() {
         $('.js-slidein').removeClass('js-slidein');
     }
 
-    $(window).scroll(function () {
-        $('.js-slidein.right').each(function (i) {
-            var bottomObject = $(this).offset().top +300;
-            var bottomWindow = $(window).scrollTop() + $(window).height();
-            if (bottomWindow > bottomObject) {
-                if(!$(this).hasClass('js-slidein-visible')) {
-                    $(this).animate({right:'0px'},600)
-                    $(this).addClass('js-slidein-visible');
-                }
-            }else{
-                if($(this).hasClass('js-slidein-visible')) {
-                    $(this).removeClass('js-slidein-visible');
-                    $(this).animate({right:'-800px'},600)
-                }
-            }
-        });
-    });
-    $(window).scroll(function () {
-        $('.js-slidein.left').each(function (i) {
-            var bottomObject = $(this).offset().top +300;
-            var bottomWindow = $(window).scrollTop() + $(window).height();
-            if (bottomWindow > bottomObject) {
-                if(!$(this).hasClass('js-slidein-visible')) {
-                    $(this).animate({left:'0px'},600)
-                    $(this).addClass('js-slidein-visible');
-                }
-            }else{
-                if($(this).hasClass('js-slidein-visible')) {
-                    $(this).removeClass('js-slidein-visible');
-                    $(this).animate({left:'-800px'},600)
-                }
-            }
-        });
-    });
+    // $(window).scroll(function () {
+    //     $('.js-slidein.right').each(function (i) {
+    //         var bottomObject = $(this).offset().top +300;
+    //         var bottomWindow = $(window).scrollTop() + $(window).height();
+    //         if (bottomWindow > bottomObject) {
+    //             if(!$(this).hasClass('js-slidein-visible')) {
+    //                 $(this).animate({right:'0px'},600)
+    //                 $(this).addClass('js-slidein-visible');
+    //             }
+    //         }else{
+    //             if($(this).hasClass('js-slidein-visible')) {
+    //                 $(this).removeClass('js-slidein-visible');
+    //                 $(this).animate({right:'-800px'},600)
+    //             }
+    //         }
+    //     });
+    // });
+    // $("#body").scroll(function () {
+    //     $('.js-slidein.left').each(function (i) {
+    //         var bottomObject = $(this).offset().top +300;
+    //         var bottomWindow = $('#body').scrollTop() + $('#body').height();
+    //         if (bottomWindow > bottomObject) {
+    //             if(!$(this).hasClass('js-slidein-visible')) {
+    //                 $(this).animate({left:'0px'},600)
+    //                 $(this).addClass('js-slidein-visible');
+    //             }
+    //         }else{
+    //             if($(this).hasClass('js-slidein-visible')) {
+    //                 $(this).removeClass('js-slidein-visible');
+    //                 $(this).animate({left:'-800px'},600)
+    //             }
+    //         }
+    //     });
+    // });
     $(".carousel-control-prev").click(function (){
         $(".carousel").carousel('prev');
     });
@@ -133,18 +133,17 @@ $(document).ready(function() {
         $("#divName").toggleClass("col-xxl-6");
     });
 
-    $(window).bind('scroll', function() {
-        let currentTop = $(window).scrollTop();
+    $('#body').bind('scroll', function() {
         let elems = $('.scrollspy');
         elems.each(function(index){
-            let elemTop 	= $(this).offset().top -100;
-            let elemBottom 	= elemTop + $(this).height()+90;
+            let elemTop 	= $(this).offset().top - 90;
+            let elemBottom 	= elemTop + $(this).height();
             let id 		= $(this).attr('id');
             let navElem = $('a[href="#' + id + '"]');
-            if(currentTop >= elemTop && elemBottom > 0){
+            if(elemTop <= 0 && elemBottom > 0){
                 navElem.addClass('active');
             }
-            if(currentTop >= elemBottom || currentTop <= elemTop){
+            if(elemBottom<=0 ||elemTop >= 0){
                 navElem.removeClass('active');
             }
         })
