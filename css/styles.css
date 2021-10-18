@@ -8049,19 +8049,19 @@ select.form-control{
 .bg-blue {
   --bs-bg-opacity: 1;
   background-color: var(--bs-primary) !important;
-  top: 3350px;
+  top: 3500px;
 }
 
 .bg-lightblue {
   --bs-bg-opacity: 1;
   background-color: rgba(113,194,241,0.9) !important;
-  top: 3750px;
+  top: 3900px;
 }
 
 .bg-orange {
   --bs-bg-opacity: 1;
   background-color: var(--bs-secondary) !important;
-  top: 4150px;
+  top: 4300px;
 }
 
 .bg-white {
