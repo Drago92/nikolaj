@@ -4225,6 +4225,7 @@ select.form-control{
   flex-basis: 100%;
   flex-grow: 1;
   align-items: center;
+  font-size: 1.5rem;
 }
 
 .navbar-toggler {
@@ -4247,7 +4248,6 @@ select.form-control{
 .navbar-toggler:focus {
   text-decoration: none;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem;
 }
 
 .navbar-toggler-icon {
@@ -4603,7 +4603,6 @@ select.form-control{
 }
 .navbar-light .navbar-toggler {
   color: rgba(0, 0, 0, 0.55);
-  border-color: rgba(0, 0, 0, 0.1);
 }
 .navbar-light .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
@@ -6362,7 +6361,7 @@ select.form-control{
 
 .carousel-caption {
   position: absolute;
-  bottom: 0rem;
+  bottom: 10rem;
   padding: 1.25rem 7%;
   margin-left: auto;
   color: #fff;
@@ -11532,8 +11531,8 @@ body {
   background-color: #fff;
 }
 #mainNav .navbar-toggler {
-  font-size: 80%;
-  padding: 0.75rem;
+  font-size: 180%;
+  padding: 1.75rem;
   color: var(--bs-primary);
 }
 #mainNav .navbar-toggler:focus {
@@ -11557,16 +11556,20 @@ body {
   margin-top: 0.4rem;
 }
 .carousel-item img{
-  height: unset;
-  position: unset;
-  width: 100%;
+  height: 100%;
+  position: absolute;
+  width: unset;
   top:-25px;
 }
 #groundwaterText{
   padding-top: 0rem;
 }
 #geothermieText{
+  display: none;
   padding-top: 0rem;
+}
+#geothermieTextMobil{
+  display: block;
 }
 .btn-link svg{
   color: var(--bs-secondary)!important;
@@ -11575,7 +11578,11 @@ body {
   #groundwaterText{
     padding-top: 11rem;
   }
+  #geothermieTextMobil{
+    display: none;
+  }
   #geothermieText{
+    display: block;
     padding-top: 5rem;
   }
   .carousel-item img{
@@ -11652,6 +11659,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
+  height: 100vh;
 }
 .masthead h1, .masthead .h1 {
   font-family: var(--bs-body-font-family);
@@ -11665,15 +11673,15 @@ body {
 .masthead h2, .masthead .h2 {
   font-family: var(--bs-body-font-family);
   font-weight: bold;
-  max-width: 20rem;
-  font-size: 1.5rem;
+  max-width: 35rem;
+  font-size: 2.5rem;
   color: #fff;
   padding-left: 10px;
 }
 .masthead .button{
   position: relative;
-  bottom: -100px;
   padding-left: 7.8%;
+  bottom: 10rem;
 }
 .masthead .carousel-caption {
   background: radial-gradient(rgba(0, 55, 96, 0.2),rgba(0, 55, 96, 0.0));
@@ -11681,10 +11689,6 @@ body {
   -webkit-backdrop-filter: blur( 1px );
 }
 @media (min-width: 768px) {
-  .masthead .button{
-    position: relative;
-    bottom: -1rem;
-  }
   .masthead h1, .masthead .h1 {
     font-size: 4rem;
     line-height: 4rem;
@@ -11698,9 +11702,6 @@ body {
   }
 }
 @media (min-width: 992px) {
-  .masthead {
-    height: 100vh;
-  }
   .masthead .button{
     position: relative;
     bottom: 11rem;
