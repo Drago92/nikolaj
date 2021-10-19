@@ -11752,6 +11752,9 @@ body {
   font-size: 90%;
 }
 @media (min-width: 992px) {
+  .vl{
+    border-right: 3px solid var(--bs-secondary) !important;
+  }
   .groundwater-section .project-text {
     padding: 5rem;
   }
@@ -11918,7 +11921,7 @@ ul {
   content: "\279C";
 }
 .vl {
-  border-right: 3px solid var(--bs-secondary);
+  border: none;
 }
 .polygon{
   width: 30px;
