@@ -118,10 +118,6 @@ h1, .h1 {
   #groundwaterText{
     padding-top: 14rem !important;
   }
-  .carousel-item img{
-    width: 100% !important;
-    height: unset !important;
-  }
   h1, .h1 {
     font-size: 2.5rem;
   }
@@ -149,6 +145,10 @@ h4, .h4 {
   font-size: calc(1.275rem + 0.3vw);
 }
 @media (min-width: 1200px) {
+  .carousel-item img{
+    width: 100% !important;
+    height: unset !important;
+  }
   h4, .h4 {
     font-size: 1.5rem;
   }
@@ -930,14 +930,12 @@ progress {
   --bs-gutter-y: 3rem;
 }
 #gardenImage{
-  height:125%;
-  top: -200px;
-  left:-320px;
+  height:110%;
+  left:-300px;
 }
 #homeImage{
-  height:125%;
-  top: -200px;
-  left:-400px;
+  height:110%;
+  left:-410px;
 }
 @media (min-width: 576px) {
   .col-sm {
@@ -3815,7 +3813,6 @@ select.form-control{
   }
   #gardenImage{
     left:0px;
-    top:0px;
   }
   #homeImage{
     left:0px;
@@ -5446,6 +5443,7 @@ select.form-control{
   }
 }
 @media (min-width: 1200px) {
+
   .list-group-horizontal-xl {
     flex-direction: row;
   }
@@ -11626,7 +11624,7 @@ body {
   height: 100%;
   position: absolute;
   width: unset;
-  top:-200px !important;
+  top:-100px;
 }
 #groundwaterText{
   padding-top: 0rem;
@@ -11642,6 +11640,9 @@ body {
   color: var(--bs-secondary)!important;
 }
 @media (min-width: 992px) {
+  .carousel-item img{
+    top:-150px;
+  }
   #groundwaterText{
     padding-top: 11rem;
   }
@@ -11708,6 +11709,12 @@ body {
     border-bottom: 0.25rem solid #FFAA29;
   }
 }
+@media (min-width: 1200px) {
+  .carousel-item img {
+    top: -150px;
+  }
+}
+
 
 .btn {
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
@@ -11741,8 +11748,8 @@ body {
 .masthead h2, .masthead .h2 {
   font-family: var(--bs-body-font-family);
   font-weight: bold;
-  max-width: 19rem;
-  font-size: 1.5rem;
+  max-width: 25rem;
+  font-size: 2rem;
   color: #fff;
   padding-left: 10px;
 }
@@ -11844,6 +11851,12 @@ body {
 }
 .vl {
   border: none;
+}
+@media (min-width: 1400px) {
+  .masthead h2, .masthead .h2 {
+    max-width: 65rem;
+    font-size: 4.5rem;
+  }
 }
 @media (min-width: 992px) {
   .vl{
