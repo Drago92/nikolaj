@@ -649,7 +649,12 @@ progress {
   margin-right: auto;
   margin-left: auto;
 }
-
+#pcAboutUs{
+  display: none;
+}
+#mobileAboutUs{
+  display: flex;
+}
 @media (min-width: 576px) {
   .container-sm, .container {
     max-width: 540px;
@@ -661,6 +666,12 @@ progress {
   }
 }
 @media (min-width: 992px) {
+  #mobileAboutUs{
+    display: none;
+  }
+  #pcAboutUs{
+    display: flex;
+  }
   .container-lg, .container-md, .container-sm, .container {
     max-width: 960px;
   }
@@ -3763,7 +3774,13 @@ select.form-control{
     left: auto;
   }
 }
+#textBadge, #textBohr{
+  font-size: 1rem;
+}
 @media (min-width: 768px) {
+  #textBadge, #textBohr{
+    font-size: 1.25rem;
+  }
   #gardenImage{
     left:0px;
     top:0px;

@@ -42,7 +42,7 @@
 <div id="body">
     <!-- Masthead-->
 
-    <div id="carouselExampleControls" class="carousel slide pb-5 mb-5" data-ride="carousel">
+    <div id="carouselExampleControls" class="carousel slide pb-xxl-5 mb-xxl-5" data-ride="carousel">
         <header class="masthead">
             <div class="carousel-inner h-100">
                 <div class="carousel-item active">
@@ -83,10 +83,17 @@
     <section class="about-section text-center scrollspy" id="about">
         <div class="container">
             <div class="row pb-5">
+                <div id="mobileAboutUs" class="col-lg-6 text-md-start align-items-center justify-content-start">
+                    <div class="text-start" style="line-height: normal">
+                        <p class="text-secondary fw-bold fs-3">ÜBER UNS</p>
+                        <p class="text-primary fw-bold fs-1">NIKOLAJ ist Ihr Spezialist<br>für Brunnen + Erdwärme<br>aus
+                            Ostwestfalen.</p>
+                    </div>
+                </div>
                 <div class="col-lg-6 pb-5">
                     <img src="assets/img/originale/Team%20Foto.png" width="100%">
                 </div>
-                <div class="col-lg-6 text-md-start d-flex align-items-center ps-5 justify-content-start">
+                <div id="pcAboutUs" class="col-lg-6 text-md-start align-items-center ps-5 justify-content-start">
                     <div class="text-start" style="line-height: normal">
                         <p class="text-secondary fw-bold fs-3">ÜBER UNS</p>
                         <p class="text-primary fw-bold fs-1">NIKOLAJ ist Ihr Spezialist<br>für Brunnen + Erdwärme<br>aus
@@ -95,24 +102,26 @@
                 </div>
             </div>
             <div class="row align-items-center d-flex">
-                <div class="col-md-4 py-5">
-                    <img src="assets/img/originale/20210902_logo_zertbau_w12012.png">
-                </div>
-                <div class="col-md-4 py-5">
-                    <div class="row d-inline-flex justify-content-sm-between">
-                        <div class="col-3 pe-5">
-                            <img src="assets/img/originale/schraube.png">
-                        </div>
-                        <div class="col-9 align-items-center d-flex">
-                            <p class="text-secondary text-start fw-bold fs-5">ÜBER 20 JAHRE<br>ERFAHRUNG</p>
+                <div class="col-12 d-inline-flex justify-content-sm-between">
+                    <div class="col-3 py-5 pe-5">
+                        <img style="height:100%; max-height:92px" src="assets/img/originale/20210902_logo_zertbau_w12012.png">
+                    </div>
+                    <div class="col-4 py-5 ps-5">
+                        <div class="row d-inline-flex justify-content-center justify-content-lg-between">
+                            <div class="col-3 pe-5 mb-4 mb-lg-0">
+                                <img style="height:100%" src="assets/img/originale/schraube.png">
+                            </div>
+                            <div class="col-md-9 align-items-center d-flex justify-content-center justify-content-lg-start">
+                                <p id="textBohr" class="text-secondary text-lg-start text-center fw-bold">ÜBER 20 JAHRE<br>ERFAHRUNG</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 py-5">
-                    <div class="row d-inline-flex justify-content-sm-between">
-                        <img class="col-5 pe-3" src="assets/img/originale/nikolaj-badge.svg">
-                        <p class="col-7 text-secondary text-start fs-5 fw-bold align-self-center">EIN EINGESPIELTES<br>EXPERTEN-TEAM
-                        </p>
+                    <div class="col-5 py-5">
+                        <div class="row d-inline-flex justify-content-center justify-content-lg-start">
+                            <img style="height:100px" class="col-lg-4 mb-4 mb-lg-0" src="assets/img/originale/nikolaj-badge.svg">
+                            <p id="textBadge" class="col-md-8 text-secondary text-lg-start text-center fw-bold align-self-center">EIN EINGESPIELTES<br>EXPERTEN-TEAM
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
