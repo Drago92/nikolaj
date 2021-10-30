@@ -11723,7 +11723,24 @@ body {
   backdrop-filter: blur( 1px );
   -webkit-backdrop-filter: blur( 1px );
 }
+#contactHeadline{
+  font-size: 3rem;
+}
+.polygon{
+  display: none;
+  width: 30px;
+  height: 300px;
+  z-index: 100;
+  clip-path: polygon(0 5%, 75% 0, 75% 95%, 0 100%);
+  margin-bottom: 115px;
+}
 @media (min-width: 768px) {
+  .polygon{
+    display: flex;
+  }
+  #contactHeadline{
+    font-size: calc(1.325rem + 0.9vw);
+  }
   .masthead h1, .masthead .h1 {
     font-size: 4rem;
     line-height: 4rem;
@@ -11958,13 +11975,7 @@ ul {
 .vl {
   border: none;
 }
-.polygon{
-  width: 30px;
-  height: 300px;
-  z-index: 100;
-  clip-path: polygon(0 5%, 75% 0, 75% 95%, 0 100%);
-  margin-bottom: 115px;
-}
+
 
 #sideLogo{
   position: relative;
