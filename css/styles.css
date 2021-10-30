@@ -655,12 +655,30 @@ progress {
 #mobileAboutUs{
   display: flex;
 }
+#datenschutzNormal{
+  display: none;
+}
+.hl {
+  width: 97% !important;
+  border-bottom: 3px solid var(--bs-secondary);
+}
 @media (min-width: 576px) {
+
   .container-sm, .container {
     max-width: 540px;
   }
 }
 @media (min-width: 768px) {
+  #datenschutzNormal{
+    display: block;
+  }
+  #datenschutzMobil{
+    display: none;
+  }
+  .hl {
+    width:unset !important;
+    border-bottom: none;
+  }
   .container-md, .container-sm, .container {
     max-width: 720px;
   }
@@ -11824,9 +11842,12 @@ body {
   padding: 3rem;
   font-size: 90%;
 }
+.vl {
+  border: none;
+}
 @media (min-width: 992px) {
   .vl{
-    border-right: 3px solid var(--bs-secondary) !important;
+    border-right: 3px solid var(--bs-secondary);
   }
   .groundwater-section .project-text {
     padding: 5rem;
@@ -11993,10 +12014,6 @@ ul {
 .card-body ul li:before {
   content: "\279C";
 }
-.vl {
-  border: none;
-}
-
 
 #sideLogo{
   position: relative;
