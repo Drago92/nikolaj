@@ -655,7 +655,11 @@ progress {
 #mobileAboutUs{
   display: flex;
 }
-
+@media (min-width: 576px) {
+  .container-sm, .container {
+    max-width: 540px;
+  }
+}
 @media (min-width: 768px) {
   .container-md, .container-sm, .container {
     max-width: 720px;
@@ -11714,9 +11718,6 @@ body {
   .masthead h2, .masthead .h2{
     max-width: 25rem;
     font-size: 2.0rem;
-  }
-  .container-sm, .container {
-    max-width: 540px;
   }
 }
 .masthead .button{
