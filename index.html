@@ -103,22 +103,22 @@
             </div>
             <div class="row align-items-center d-flex">
                 <div class="col-12 d-inline-flex justify-content-sm-between">
-                    <div class="col-3 py-5 pe-5">
-                        <img style="height:100%; max-height:62px" src="assets/img/originale/20210902_logo_zertbau_w12012.png">
+                    <div class="col-4 py-5">
+                        <img id="imgBau" src="assets/img/originale/20210902_logo_zertbau_w12012.png">
                     </div>
-                    <div class="col-4 py-5 ps-5">
+                    <div class="col-4 py-5">
                         <div class="row d-inline-flex justify-content-center justify-content-lg-between">
                             <div class="col-3 pe-5 mb-4 mb-lg-0">
-                                <img style="height:100%" src="assets/img/originale/schraube.png">
+                                <img id="imgBohr" src="assets/img/originale/schraube.png">
                             </div>
-                            <div class="col-md-9 align-items-center d-flex justify-content-center justify-content-lg-start">
+                            <div class="col-lg-9 align-items-center d-flex justify-content-center justify-content-lg-start">
                                 <p id="textBohr" class="text-secondary text-lg-start text-center fw-bold">ÜBER 20 JAHRE<br>ERFAHRUNG</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-5 py-5">
+                    <div class="col-4 py-5">
                         <div class="row d-inline-flex justify-content-center justify-content-lg-start">
-                            <img style="height:100px" class="col-lg-4 mb-4 mb-lg-0" src="assets/img/originale/nikolaj-badge.svg">
+                            <img id="imgBadge" class="col-lg-4 mb-4 mb-lg-0" src="assets/img/originale/nikolaj-badge.svg">
                             <p id="textBadge" class="col-md-8 text-secondary text-lg-start text-center fw-bold align-self-center">EIN EINGESPIELTES<br>EXPERTEN-TEAM
                             </p>
                         </div>
@@ -614,39 +614,39 @@
                 </div>
                 <div class="col-lg-6">
                     <div id="form" class="text-primary">
-                        <h2 id="contactHeadline" class="fw-bold">Schreiben Sie uns.</h2>
+                        <h2 id="contactHeadline" class="fw-bold pb-3">Schreiben Sie uns.</h2>
                         <!-- Name input -->
                         <div class="form-outline row mb-2">
                             <div id="divName" class="col-xxl-6">
-                                <input type="text" id="name" class="form-control"/>
                                 <label class="form-label" for="name">Ihr Vor- und Nachname*</label>
+                                <input type="text" id="name" class="form-control"/>
                                 <label id="errname" class="errText"></label>
                             </div>
                             <div id="divFirma" class="col-xxl-6">
-                                <input type="text" id="firma" class="form-control"/>
                                 <label class="form-label" for="name">Firma*</label>
+                                <input type="text" id="firma" class="form-control"/>
                                 <label id="errfirma" class="errText"></label>
                             </div>
                         </div>
                         <!-- Adresse -->
                         <div class="form-group row mb-2">
                             <div class="col-xxl-6">
-                                <input type="text" id="strasse" class="form-control"/>
                                 <label class="form-label" for="strasse">Straße + Nr.</label>
+                                <input type="text" id="strasse" class="form-control"/>
                             </div>
                             <div class="col-xxl-6">
-                                <input type="text" id="plz" class="form-control"/>
                                 <label class="form-label" for="plz">PLZ/Ort</label>
+                                <input type="text" id="plz" class="form-control"/>
                             </div>
                         </div>
                         <!-- Email input -->
                         <div class="form-outline mb-2">
+                            <label class="form-label" for="email">Email Addresse*</label>
                             <input type="email" id="email" class="form-control"/>
-                            <label class="form-label" for="email">*Email Addresse</label>
                             <label id="errmail" class="errText"></label>
                         </div>
                         <div class="form-group row mb-2">
-                            <div class="col-xxl-6">
+                            <div class="col-lg-6">
                                 <input
                                         class="form-check-input me-2"
                                         type="checkbox"
@@ -657,7 +657,7 @@
                                     Ich bin Privatkunde
                                 </label>
                             </div>
-                            <div class="col-xxl-6">
+                            <div class="col-lg-6">
                                 <input
                                         class="form-check-input me-2"
                                         type="checkbox"
@@ -671,29 +671,29 @@
                             </div>
                         </div>
                         <div class="form-outline select mb-2">
+                            <label class="form-label" for="betreff">Betreff*</label>
                             <select type="text" id="betreff" class="form-control fw-bold" class="form-select-lg">
                                 <option>Brunnenbau</option>
                                 <option>Erdwärme</option>
                                 <option>Individuelle Anfrage</option>
                             </select>
-                            <label class="form-label" for="betreff">*Betreff</label>
                         </div>
                         <!-- Message input -->
-                        <div class="form-outline mb-2">
-                            <textarea class="form-control" id="message" rows="4"></textarea>
+                        <div class="form-outline">
                             <label class="form-label" for="message">Ihre Nachricht*</label>
+                            <textarea class="form-control" id="message" rows="4"></textarea>
                             <label id="errmessage" class="errText"></label>
                         </div>
                         <label id="returnmessage" class=""></label>
                         <!-- Submit button -->
                         <div class="form-group row mb-2">
-                            <div class="col-xxl-6">
+                            <div class="col-xl-6">
                                 <p style="font-size: 0.9rem;">Informationen zur Datenverarbeitung durch die Nutzung des
                                     Kontaktformulars finden Sie in unserer <a href="datenschutz.html"
                                                                               style="color: var(--bs-primary)">Datenschutzerklärung</a>
                                 </p>
                             </div>
-                            <div class="col-xxl-6">
+                            <div class="col-xl-6">
                                 <button id="submit" class="btn btn-primary mb-4">Jetzt unverbindlich anfragen</button>
                                 <p style="top:-15px; position: relative; font-size: 0.75rem">*Pflichtfelder</p>
                             </div>

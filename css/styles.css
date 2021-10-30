@@ -2465,7 +2465,7 @@ select.form-control{
   content: "\f0dd";
   font-family:FontAwesome;
   color: var(--bs-secondary);
-  position: absolute; right: 0; top: -10px;
+  position: absolute; right: 0; top: 20px;
   z-index: 1;
   text-align: center;
   width: 10%;
@@ -3774,10 +3774,24 @@ select.form-control{
     left: auto;
   }
 }
+#imgBau, #imgBohr, #imgBadge{
+  height:50px;
+}
 #textBadge, #textBohr{
-  font-size: 1rem;
+  font-size: 0.8rem;
+}
+@media (min-width: 576px) {
+  #imgBau, #imgBohr, #imgBadge{
+    height:80px;
+  }
+  #textBadge, #textBohr{
+    font-size: 1rem;
+  }
 }
 @media (min-width: 768px) {
+  #imgBau, #imgBohr, #imgBadge{
+    height:100px;
+  }
   #textBadge, #textBohr{
     font-size: 1.25rem;
   }
@@ -11967,7 +11981,7 @@ svg{
 }
 .arrowUp:after {
   transform: rotate(180deg);
-  top:0px !important;
+  top:30px !important;
 }
 .pull-right {
   float: right;
