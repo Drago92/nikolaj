@@ -11575,8 +11575,10 @@ body {
   height: calc(100% - 5rem);
   top:5rem;
   width: 100%;
+  overflow: auto;
   overflow: overlay;
   scroll-behavior: smooth;
+  scrollbar-width:thin;
 }
 ::-webkit-scrollbar {
   width: 10px;
