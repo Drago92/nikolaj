@@ -101,7 +101,7 @@ $(document).ready(function() {
                 message: message,
                 address: address,
                 betreff: kunde + ': ' + betreff,
-                emailTo: 'k.broja@web.de'
+                emailTo: 'info@brunnenbau-nikolaj.de'
             }, function (data) {
                 $("#returnmessage").append(data); // Append returned message to message paragraph.
                 if (data == "Vielen Dank für Ihre Anfrage. Wir werden sie bald kontaktieren.") {

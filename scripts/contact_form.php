@@ -9,7 +9,7 @@ if($_POST){
     $address = $_POST['address'];
 
     //send email
-    if(mail($emailTo, $betreff, $message. "\n\n" .$firma. "\n" .$address, "From: " .$name. " <" .$email. ">")){
+    if(mail($emailTo, $betreff, $message. "\n\nVON:\n" .$firma. "\n" .$address, "From: " .$name. " <" .$email. ">")){
         echo "Vielen Dank für Ihre Anfrage. Wir werden sie bald kontaktieren.";
     } else {
         echo 'Es tut uns Leid, aber die Email wurde nicht verschickt.';
