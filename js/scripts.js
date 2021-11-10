@@ -106,6 +106,9 @@ $(document).ready(function() {
                 $("#returnmessage").append(data); // Append returned message to message paragraph.
                 if (data == "Vielen Dank für Ihre Anfrage. Wir werden sie bald kontaktieren.") {
                     $("#form")[0].reset(); // To reset form fields on success.
+                    $("#returnmessage").addClass("succeedText");
+                }else{
+                    $("#returnmessage").addClass("errText");
                 }
             });
         }

@@ -11943,6 +11943,9 @@ body {
 .errText{
   color: red;
 }
+.succeedText{
+  color: green;
+}
 
 .footerBadge{
   height: 10rem;
