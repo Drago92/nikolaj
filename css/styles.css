@@ -11818,6 +11818,28 @@ body {
     font-size: 3.5rem;
   }
 }
+@media (min-width: 2100px) and (min-height: 1100px) {
+  .masthead .button{
+    position: relative;
+    bottom: 21rem;
+  }
+  .masthead .carousel-caption {
+    bottom: 20rem;
+  }
+}
+@media (min-width: 3100px) and (min-height: 2100px) {
+  .masthead .button{
+    position: relative;
+    bottom: 41rem;
+  }
+  .masthead .carousel-caption {
+    bottom: 40rem;
+  }
+  .masthead h2, .masthead .h2 {
+    max-width: 85rem;
+    font-size: 6rem;
+  }
+}
 .groundwater-section {
   padding-top:5rem;
   overflow: hidden;
@@ -11853,12 +11875,6 @@ body {
 }
 .vl {
   border: none;
-}
-@media (min-width: 1400px) {
-  .masthead h2, .masthead .h2 {
-    max-width: 65rem;
-    font-size: 4.5rem;
-  }
 }
 @media (min-width: 992px) {
   .vl{
