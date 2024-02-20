@@ -62,7 +62,7 @@ $(document).ready(function() {
         $(".carousel").carousel('next');
     });
 
-    $("#submit").click(function() {
+    $("#form").submit(function() {
         let name = $("#name").val();
         let firma = $("#firma").val();
         let email = $("#email").val();
