@@ -25,8 +25,8 @@ if($_POST){
         // Login
         $mail->Host = "	smtp.ionos.de";
         $mail->Port = "465";
-        $mail->Username = 'info@brunnenbau-nikolaj.de';
-        $mail->Password = "Nikolaj1863!";
+        $mail->Username = 'xxxxxxxx';
+        $mail->Password = "xxxxxxx";
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
 
