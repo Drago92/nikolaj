@@ -38,7 +38,7 @@ if($_POST){
 
         $mail->isHTML(true);
         $mail->Subject = $betreff;
-        $mail->Body = $message. "\n\nVON:\n" .$firma. "\n" .$name. "\n" .$address. "\nFrom: " .$name. " <" .$email. ">";
+        $mail->Body = $message. "<br><br>Von:<br>" .$firma. "<br>" .$name. "<br>" .$address. "<br>Email: " .$email;
 
         $mail->CharSet = 'UTF-8';
         $mail->Encoding = 'base64';
