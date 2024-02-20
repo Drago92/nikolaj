@@ -112,6 +112,7 @@ $(document).ready(function() {
                 }
             });
         }
+        return false;  // To stop form submission
     });
     $("#checkgewerbe").click(function (){
         if($("#checkgewerbe").prop('checked')){
