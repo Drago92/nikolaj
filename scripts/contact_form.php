@@ -3,7 +3,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require_once "vendor/autoload.php";
+require_once "../vendor/autoload.php";
 
 if($_POST){
     $name = $_POST['name'];
